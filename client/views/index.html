@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hi Circuit</title>
+    <link rel="stylesheet" href="/css/app.css">
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="https://circuitsandbox.net/sdk.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="/js/controllers.js"></script>
+  </head>
+
+
+
+  <body ng-app="circuit.helloworld" data-ng-cloak>
+
+  <div ng-controller="InitCtrl">
+
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <ul class="nav nav-tabs">
+            <li><a href="/login">Log in</a></li>
+            <li><a href="/logout" ng-show="!!localUser">Log out</a></li>
+            <div id="userInfo" class="pull-right" ng-show="!!localUser" >Welcome&nbsp;<strong>{{localUser.displayName}}&nbsp;</strong></div>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div data-ui-view class="container"></div>
+    <div id="alertBox" data-ng-show="error" class="alert alert-danger">
+      <button type="button" data-ng-click="error = null;" class="close">&times;</button><strong>Oh no!&nbsp;</strong><span data-ng-bind="error"></span>
+    </div>
+
+    <div ng-view=""></div>
+
+  </div> <!-- InitCtrl -->
+
+  </body>
+</html>

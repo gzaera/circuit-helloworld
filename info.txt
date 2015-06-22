@@ -1,0 +1,59 @@
+
+Example web application using...
+================================
+
+Express for building the nodejs web sever: http://expressjs.com/
+
+Bower to manage packages versions: http://bower.io/
+
+Bootstrap for JS client UI: http://getbootstrap.com/
+
+Angular for JS client UI: https://angularjs.org/
+
+Grunt as JS Task runner: http://gruntjs.com/
+
+================
+ Prerequisites:
+================
+
+* nodejs:
+----------
+https://nodejs.org/download/
+
+*git:
+-----
+http://git-scm.com/download
+
+Note: for Windows 7/8/8.1 you will need to add Git to Path as: 
+;%PROGRAMFILES(x86)%\Git\bin;%PROGRAMFILES(x86)%\Git\cmd
+
+* bower:
+---------
+npm install -g bower
+
+
+=================
+ Getting Started:
+=================
+npm install
+
+
+=====================
+ How to start server:
+=====================
+
+npm start 
+
+or 
+
+node server.js
+
+=========================
+ How to start the client:
+=========================
+
+http on the IP address of your server on port 8000
+
+http://localhost:8000/
+
+
